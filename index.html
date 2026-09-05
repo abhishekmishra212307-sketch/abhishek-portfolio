@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Abhishek Mishra | Web Developer & Freelancer</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home -->
+    <div id="home">
+
+        <h1 id="mainHeading">Hi, I'm Abhishek Mishra</h1> 
+
+        <h2>Web Developer & Freelancer</h2>
+
+        <p>
+            I am learning web development and building my skills
+            to start my freelancing career.
+        </p>
+
+        <p>
+            I create simple, responsive and user-friendly websites.
+        </p>
+
+        <h2>My Services</h2>
+
+        <ul>
+            <li>Website Design</li>
+            <li>Responsive Website Development</li>
+            <li>Basic HTML & CSS Websites</li>
+        </ul>
+
+        <a href="#contact">
+            <button>Contact Me</button>
+        </a>
+
+        <p>Welcome to my first website.</p>
+
+        <a href="https://www.google.com">Visit Google</a>
+
+        <br><br>
+
+        <img src="photo.jpg" alt="My Photo" width="200">
+
+        <br><br>
+
+        <button onclick="showMessage()">ShowMessage</button>
+        <button onclick="changeHeading()">ChangeHeading</button>
+
+    </div>
+
+
+    <!-- About -->
+    <div id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            My name is Abhishek Mishra. I am a BCA student and
+            I am learning Web Development. I am interested in
+            creating websites and want to build my career in
+            freelancing.
+        </p>
+        <div class="about-highlight">
+    <strong>My Focus:</strong> Learning Web Development and building my freelancing career.
+</div>
+
+    </div>
+
+
+    <!-- Skills -->
+    <div id="skills">
+
+        <h2>My Skills</h2>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Responsive Web Design</li>
+            <li>Git & GitHub</li>
+        </ul>
+        <div class="skill-progress">
+    <p>HTML</p>
+    <div class="progress">
+        <div class="progress-bar html"></div>
+    </div>
+
+    <p>CSS</p>
+    <div class="progress">
+        <div class="progress-bar css"></div>
+    </div>
+
+    <p>JavaScript</p>
+    <div class="progress">
+        <div class="progress-bar javascript"></div>
+    </div>
+</div> 
+
+        <p>I am learning Web Development.</p>
+
+    </div>
+
+
+    <!-- Goals -->
+    <div id="goals">
+
+        <h2>My Goals</h2>
+
+        <p>
+            My goals are to become a professional web developer,
+            build useful websites, improve my coding skills,
+            and start earning through freelancing.
+        </p>
+
+        <table border="1">
+
+            <tr>
+                <th>Class</th>
+                <th>Stream</th>
+                <th>Course</th>
+            </tr>
+
+            <tr>
+                <td>12th</td>
+                <td>Commerce</td>
+                <td>Completed</td>
+            </tr>
+
+            <tr>
+                <td>College</td>
+                <td>BCA</td>
+                <td>Web Development</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <!-- Services -->
+    <div id="services">
+
+        <h2>What I Can Do</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h2>Web Development</h2>
+                <p>I am learning HTML, CSS and JavaScript.</p>
+                <button>Learn More</button>
+            </div>
+
+            <div class="card">
+                <h2>Freelancing</h2>
+                <p>I want to work with clients online.</p>
+                <button>Learn More</button>
+            </div>
+
+            <div class="card">
+                <h2>My Goal</h2>
+                <p>I want to become a professional developer.</p>
+                <button>Learn More</button>
+            </div>
+
+            <div class="card">
+                <h2>Website Design</h2>
+                <p>I can create simple and responsive websites.</p>
+                <button>View Service</button>
+            </div>
+
+            <div class="card">
+                <h2>Landing Page</h2>
+                <p>I can create clean landing pages for businesses.</p>
+                <button>View Service</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Projects -->
+<div id="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>Portfolio Website</h2>
+            <p>A responsive personal portfolio website using HTML, CSS and JavaScript.</p>
+            <button onclick="alert('Project coming soon!')">View Project</button>
+        </div>
+
+        <div class="card">
+            <h2>Landing Page</h2>
+            <p>A clean and simple landing page design for a business.</p>
+            <button onclick="alert('Project coming soon!')">View Project</button>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript Project</h2>
+            <p>A basic interactive project created using JavaScript.</p>
+            <button onclick="alert('Project coming soon!')">View Project</button>
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- Contact -->
+    <div id="contact">
+
+        <h2>Contact Me</h2>
+
+        <h2>Abhishek Mishra</h2>
+
+        <p>I am a BCA student and learning Web Development.</p>
+
+        <form onsubmit="submitForm(event)">
+
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name">
+
+            <br><br>
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email">
+
+            <br><br>
+
+            <label>Message:</label>
+            <br>
+
+            <textarea placeholder="Write your message"></textarea>
+
+            <br><br>
+
+            <button type="submit">Submit</button>
+            <p>
+    Email: 
+    <a href="mailto:your@email.com">Contact Me</a>
+</p>
+
+        </form>
+        <div class="social-links">
+    <h3>Connect With Me</h3>
+
+    <a href="https://www.instagram.com/a7_mishra_?igsi=MWY4YXl1dDhobHBhZQ==" target="_blank">Instagram</a>
+    <a href="#" target="_blank">LinkedIn</a>
+    <a href="#" target="_blank">GitHub</a>
+</div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Abhishek Mishra | Web Developer & Freelancer</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            alert("Thank you for visiting my website!");
+        }
+        function changeHeading() {
+            document. getElementById("mainHeading").innerText="welcome to my Portfolio!";
+        }
+        function submitForm(event) {
+            event.preventDefault();
+            alert("Thank you! Your message has been submitted.");
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
