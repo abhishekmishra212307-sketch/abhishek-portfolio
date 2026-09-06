@@ -1444,3 +1444,38 @@ footer p {
 .project-card a:hover {
     opacity: 0.8;
 }
+#home {
+    padding: 100px 20px;
+    background: linear-gradient(to right, #f5f5f5, #ffffff);
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+#home h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+#home .contact-btn {
+    margin: 8px;
+}
+#home h1 {
+    letter-spacing: 1px;
+}
+#home h2 {
+    font-weight: normal;
+}
+#home .contact-btn {
+    display: inline-block;
+}
