@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.todo-container {
+    width: 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    display: flex;
+    gap: 10px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.input-box button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#taskList li {
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+#themeBtn {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background: #222;
+    color: white;
+}
+
+.dark-mode .todo-container {
+    background: #333;
+}
+
+.dark-mode #taskInput {
+    background: #444;
+    color: white;
+    border-color: #666;
+}
+
+.dark-mode #taskList li {
+    background: #444;
+}
+.task-counter {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.task-counter span {
+    text-align: center;
+}
+
+.dark-mode .task-counter {
+    background: #444;
+}
+/* Professional UI */
+
+.search-box {
+    margin-top: 15px;
+}
+
+.search-box input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.filter-buttons button {
+    flex: 1;
+    padding: 9px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#taskList li button {
+    transition: 0.2s;
+}
+
+#taskList li button:hover,
+.filter-buttons button:hover,
+.input-box button:hover,
+#themeBtn:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+.todo-container > button:last-of-type {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 500px) {
+    .todo-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    .input-box button {
+        width: 100%;
+    }
+
+    #taskList li {
+        flex-wrap: wrap;
+    }
+
+    #taskList li span {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    #taskList li button {
+        flex: 1;
+    }
+
+    .task-counter {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+}
