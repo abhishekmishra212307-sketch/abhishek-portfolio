@@ -185,3 +185,29 @@ h1 {
         flex-wrap: wrap;
     }
 }
+/* Task Action Buttons */
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+#taskList li span {
+    flex: 1;
+    font-size: 15px;
+}
+
+#taskList li button {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
