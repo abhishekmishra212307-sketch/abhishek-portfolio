@@ -1660,3 +1660,17 @@ footer p {
         width: 90%;
     }
 }
+.project-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-card a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
