@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transition: 0.3s;
+}
+
+.clock-container {
+    width: 450px;
+    padding: 40px 30px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+    color: white;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+#greeting {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#clock {
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+#ampm {
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+#date {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    transform: translateY(-2px);
+}
+
+/* Dark Mode */
+
+.dark-mode {
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .clock-container {
+        width: 90%;
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    #clock {
+        font-size: 40px;
+    }
+
+    #greeting {
+        font-size: 18px;
+    }
+
+    #date {
+        font-size: 15px;
+    }
+}
+.world-clocks {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.world-clock {
+    flex: 1;
+    min-width: 110px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+}
+
+.world-clock h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+}
+
+.world-clock p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* ================= ALARM DESIGN ================= */
+
+.alarm {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.alarm h2 {
+    margin-bottom: 20px;
+}
+
+.alarm-select {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.alarm-select select {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.alarm-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.alarm-buttons button,
+#stopAlarmBtn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#alarmStatus {
+    margin-top: 18px;
+    font-weight: bold;
+    font-size: 16px;
+}
+/* Alarm Button Hover */
+
+.alarm-buttons button:hover,
+#stopAlarmBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.alarm-buttons button,
+#stopAlarmBtn {
+    transition: 0.2s ease;
+}
+#stopAlarmBtn {
+    margin-top: 15px;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 600px) {
+
+    .alarm {
+        padding: 18px;
+    }
+
+    .alarm-select select {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .alarm-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .alarm-buttons button,
+    #stopAlarmBtn {
+        width: 90%;
+        max-width: 250px;
+    }
+}
+#alarmStatus {
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+#stopAlarmBtn {
+    margin-top: 15px;
+    font-weight: bold;
+    border: 2px solid #ff4d4d;
+}
