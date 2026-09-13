@@ -176,26 +176,21 @@ updateStopwatch();
 let alarmSound = new Audio("./Alarm.mp3");
 alarmSound.loop = true;
 function enableAlarmSound() {
+    alarmSound.loop = true;
     alarmSound.currentTime = 0;
 
     alarmSound.play()
         .then(() => {
             document.getElementById("alarmStatus").innerText =
-                "🔊 Sound is working!";
-
-            setTimeout(() => {
-                alarmSound.pause();
-                alarmSound.currentTime = 0;
-            }, 2000);
+                "🔊 Alarm sound enabled!";
         })
         .catch((error) => {
             document.getElementById("alarmStatus").innerText =
                 "❌ Sound blocked by browser";
 
-            console.log(error);
+            console.log("Audio error:", error);
         });
 }
-    
 
 // ================= ALARM =================
 
