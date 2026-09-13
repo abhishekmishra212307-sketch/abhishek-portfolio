@@ -170,7 +170,26 @@ function resetStopwatch() {
 
 updateStopwatch();
 
-let alarmSound = new Audio("Alarm.mp3");
+
+// ================= ALARM SOUND =================
+
+let alarmSound = new Audio("./Alarm.mp3");
+alarmSound.loop = true;
+function enableAlarmSound() {
+    alarmSound.play()
+        .then(() => {
+            alarmSound.pause();
+            alarmSound.currentTime = 0;
+
+            document.getElementById("alarmStatus").innerText =
+                "🔊 Alarm sound enabled!";
+        })
+        .catch(error => {
+            console.log("Audio permission error:", error);
+        });
+}
+
+
 // ================= ALARM =================
 
 let alarmTime = null;
@@ -206,6 +225,16 @@ function setAlarm() {
     document.getElementById("alarmStatus").innerText =
         "⏰ Alarm set for " + hour + ":" + minute + " " + ampm;
 
+
+    // Unlock audio on mobile browser
+    alarmSound.play().then(() => {
+        alarmSound.pause();
+        alarmSound.currentTime = 0;
+    }).catch(() => {
+        console.log("Audio permission pending");
+    });
+
+
     // Remove previous alarm checker
     clearInterval(alarmInterval);
 
@@ -230,10 +259,13 @@ function checkAlarm() {
         currentMinute === alarmTime.minute
     ) {
 
-        alarmSound.play();
+        alarmSound.currentTime = 0;
+
+        alarmSound.play().catch(error => {
+            console.log("Alarm sound blocked:", error);
+        });
+
         console.log("Alarm reached!");
-       document.getElementById("alarmStatus").innerText =
-       "🔔 ALARM! Time is up!";
 
         document.getElementById("alarmStatus").innerText =
             "🔔 Alarm ringing!";
@@ -259,7 +291,10 @@ function cancelAlarm() {
     document.getElementById("alarmStatus").innerText =
         "No alarm set";
 }
+
+
 function stopAlarm() {
+
     alarmSound.pause();
     alarmSound.currentTime = 0;
 
