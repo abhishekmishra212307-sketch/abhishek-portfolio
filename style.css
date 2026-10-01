@@ -2236,4 +2236,13 @@ section h2 {
 .skill,
 .about-highlight {
     box-sizing: border-box;
+}/* ===== Skills Text Fix ===== */
+
+.skill {
+    color: #222;
+    background: #f8f8f8;
+}
+
+.skill-progress p {
+    color: #222;
 }
