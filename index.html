@@ -1,443 +1,525 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Abhishek Mishra - BCA student, aspiring web developer and freelancer.">
     <title>Abhishek Mishra | Web Developer & Freelancer</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <button id="themeBtn">🌙 Dark Mode</button>
-        <h2>Abhishek Mishra</h2>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">Abhishek<span>.</span></a>
 
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#goals">Goals</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#goals">Goals</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
 
+    <main>
 
-    <!-- Home -->
-    <section id="home">
+        <!-- Home Section -->
+        <section id="home" class="section home-section">
+            <div class="home-content">
 
-        <div class="home-content">
+                <div class="home-text">
+                    <p class="intro-text">HELLO, WELCOME TO MY PORTFOLIO</p>
 
-            <div class="home-text">
+                    <h1>Hi, I'm <span>Abhishek Mishra</span></h1>
 
-                <p class="intro">Hello, I'm</p>
+                    <h2>Aspiring Web Developer & Freelancer</h2>
 
-                <h1>Abhishek Mishra</h1>
+                    <p class="home-description">
+                        I'm a BCA student passionate about web development.
+                        I'm learning to build modern, responsive and user-friendly
+                        websites while improving my programming skills.
+                    </p>
 
-                <h2>Web Developer & Freelancer</h2>
+                    <div class="home-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
 
+                    <div class="social-links home-social">
+                        <a href="https://github.com/abhishekmishra212307-sketch"
+                           target="_blank" rel="noopener noreferrer">GitHub</a>
+
+                        <a href="https://www.linkedin.com/in/abhishek-mishra-94684a426"
+                           target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+                        <a href="https://www.instagram.com/a7mishra__"
+                           target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="home-image">
+                    <!-- Apni photo ka sahi path yahan likhein -->
+                    <img
+                        src="profile.jpg"
+                        alt="Abhishek Mishra"
+                        class="profile-img"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    >
+
+                    <div class="profile-placeholder" style="display: none;">
+                        AM
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-heading">
+                <p class="section-subtitle">GET TO KNOW ME</p>
+                <h2>About <span>Me</span></h2>
+            </div>
+
+            <div class="about-content">
                 <p>
-                    I'm a BCA student and aspiring web developer.
-                    I build simple, responsive and user-friendly websites
-                    using HTML, CSS and JavaScript.
+                    Hello! I'm Abhishek Mishra, a Bachelor of Computer Applications
+                    (BCA) student at PSIT College of Higher Education, Kanpur.
+                    I'm interested in web development, programming and modern
+                    technologies.
                 </p>
 
-                <div class="home-buttons">
+                <p>
+                    As a beginner, I'm continuously learning HTML, CSS, JavaScript
+                    and C programming. I enjoy practising by creating small
+                    projects and solving problems.
+                </p>
 
-                    <a href="#projects" class="contact-btn">
-                        View My Projects
-                    </a>
+                <p class="about-highlight">
+                    My goal is to become a skilled web developer, build useful
+                    digital products and gradually start freelancing.
+                </p>
+            </div>
+        </section>
 
-                    <a href="#contact" class="contact-btn">
-                        Contact Me
-                    </a>
+        <!-- Skills Section -->
+        <section id="skills" class="section alternate-section">
+            <div class="section-heading">
+                <p class="section-subtitle">WHAT I'M LEARNING</p>
+                <h2>My <span>Skills</span></h2>
+            </div>
 
+            <div class="skills-container">
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>HTML</span>
+                        <span>Learning</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress html-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>CSS</span>
+                        <span>Learning</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress css-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                        <span>Learning</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress js-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>C Programming</span>
+                        <span>Learning</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress c-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Git & GitHub</span>
+                        <span>Learning</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress git-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Responsive Web Design</span>
+                        <span>Learning</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress responsive-progress"></div>
+                    </div>
                 </div>
 
             </div>
 
+            <p class="skills-note">
+                These indicators represent my current learning progress,
+                not professional skill certifications.
+            </p>
+        </section>
 
-            <div class="home-image">
+        <!-- Goals Section -->
+        <section id="goals" class="section">
+            <div class="section-heading">
+                <p class="section-subtitle">MY FUTURE PLANS</p>
+                <h2>My <span>Goals</span></h2>
+            </div>
 
-                <img
-                    src="profile.jpg/WhatsApp Image 2026-09-06 at 8.38.04 PM.jpeg"
-                    class="profile-img"
-                    alt="Abhishek Mishra">
+            <div class="goals-content">
+                <div class="goal-card">
+                    <div class="goal-number">01</div>
+                    <h3>Learn Web Development</h3>
+                    <p>
+                        Improve my HTML, CSS and JavaScript skills by practising
+                        regularly and building websites.
+                    </p>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-number">02</div>
+                    <h3>Build Real Projects</h3>
+                    <p>
+                        Create practical projects that help me understand
+                        programming and solve everyday problems.
+                    </p>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-number">03</div>
+                    <h3>Start Freelancing</h3>
+                    <p>
+                        Develop the skills needed to create websites for clients
+                        and gain practical experience.
+                    </p>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-number">04</div>
+                    <h3>Prepare for an IT Career</h3>
+                    <p>
+                        Strengthen my technical knowledge and work towards
+                        a software or web development internship.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section alternate-section">
+            <div class="section-heading">
+                <p class="section-subtitle">WHAT I CAN WORK ON</p>
+                <h2>My <span>Services</span></h2>
+            </div>
+
+            <div class="services-container">
+
+                <article class="service-card">
+                    <div class="service-icon">&lt;/&gt;</div>
+                    <h3>Website Design</h3>
+                    <p>
+                        Simple and clean website layouts using HTML and CSS.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">▣</div>
+                    <h3>Responsive Websites</h3>
+                    <p>
+                        Beginner-level responsive pages for mobile, tablet
+                        and desktop screens.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">✦</div>
+                    <h3>Basic Web Projects</h3>
+                    <p>
+                        Small interactive projects using HTML, CSS and
+                        JavaScript as I continue learning.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-heading">
+                <p class="section-subtitle">MY PRACTICE WORK</p>
+                <h2>My <span>Projects</span></h2>
+            </div>
+
+            <div class="projects-container">
+
+                <article class="project-card">
+                    <div class="project-visual calculator-visual">
+                        <span>01</span>
+                        <div class="project-symbol">＋ − × ÷</div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Calculator</h3>
+                        <p>
+                            A calculator project created to practise HTML,
+                            CSS and JavaScript.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/abhishekmishra212307-sketch/abhishek-portfolio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >View on GitHub ↗</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual todo-visual">
+                        <span>02</span>
+                        <div class="project-symbol">✓ To-Do List</div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>To-Do List</h3>
+                        <p>
+                            A task-management project for adding and organising
+                            daily tasks.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/abhishekmishra212307-sketch/abhishek-portfolio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >View on GitHub ↗</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual clock-visual">
+                        <span>03</span>
+                        <div class="project-symbol">◷ Digital Clock</div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Digital Clock</h3>
+                        <p>
+                            A clock dashboard project created to practise
+                            JavaScript and interactive user interfaces.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/abhishekmishra212307-sketch/abhishek-portfolio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >View on GitHub ↗</a>
+                    </div>
+                </article>
 
             </div>
 
-        </div>
+            <p class="project-note">
+                Note: The project links above open your GitHub repository.
+                You can replace them with individual project links later.
+            </p>
+        </section>
 
-    </section>
-
-
-    <!-- About -->
-    <section id="about">
-
-        <h2>About Me</h2>
-
-        <p>
-            I'm Abhishek Mishra, a BCA student and aspiring web developer.
-            I am learning HTML, CSS and JavaScript and building practical
-            projects to improve my development skills.
-        </p>
-
-        <p>
-            My goal is to become a professional web developer and
-            build useful, responsive and user-friendly websites.
-        </p>
-
-        <div class="about-highlight">
-
-            <strong>My Focus:</strong>
-            Web Development, Practical Projects and Freelancing.
-
-        </div>
-
-    </section>
-
-
-    <!-- Skills -->
-    <section id="skills">
-
-        <h2>My Skills</h2>
-
-        <div class="skills-container">
-
-            <div class="skill">HTML</div>
-
-            <div class="skill">CSS</div>
-
-            <div class="skill">JavaScript</div>
-
-            <div class="skill">Responsive Web Design</div>
-
-            <div class="skill">Git & GitHub</div>
-
-            <div class="skill">C</div>
-
-        </div>
-
-
-        <div class="skill-progress">
-
-            <p>HTML</p>
-
-            <div class="progress">
-
-                <div class="progress-bar html"></div>
-
-            </div>
-
-
-            <p>CSS</p>
-
-            <div class="progress">
-
-                <div class="progress-bar css"></div>
-
-            </div>
-
-
-            <p>JavaScript</p>
-
-            <div class="progress">
-
-                <div class="progress-bar javascript"></div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Goals -->
-    <section id="goals">
-
-        <h2>My Goals</h2>
-
-        <p>
-            My goals are to become a professional web developer,
-            build useful websites, improve my coding skills,
-            and start earning through freelancing.
-        </p>
-
-
-        <table border="1">
-
-            <tr>
-                <th>Stage</th>
-                <th>Field</th>
-                <th>Status</th>
-            </tr>
-
-            <tr>
-                <td>12th</td>
-                <td>Commerce</td>
-                <td>Completed</td>
-            </tr>
-
-            <tr>
-                <td>College</td>
-                <td>BCA</td>
-                <td>1st Year</td>
-            </tr>
-
-            <tr>
-                <td>Career Goal</td>
-                <td>Web Development</td>
-                <td>Learning</td>
-            </tr>
-
-        </table>
-
-    </section>
-
-
-    <!-- Services -->
-    <section id="services">
-
-        <h2>My Services</h2>
-
-
-        <div class="services-container">
-
-            <div class="service-card">
-
-                <h3>🌐 Website Development</h3>
-
-                <p>
-                    Simple and professional websites for personal
-                    or small business needs.
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-heading">
+                <p class="section-subtitle">LET'S CONNECT</p>
+                <h2>Contact <span>Me</span></h2>
+                <p class="section-description">
+                    Have a question or want to connect? Feel free to reach out.
                 </p>
-
             </div>
 
+            <div class="contact-container">
 
-            <div class="service-card">
+                <div class="contact-info">
+                    <h3>Connect With Me</h3>
 
-                <h3>🎨 Website Design</h3>
+                    <p>
+                        I'm open to learning opportunities, project discussions
+                        and connecting with people in technology.
+                    </p>
 
-                <p>
-                    Clean and modern website layouts using HTML and CSS.
-                </p>
+                    <div class="contact-item">
+                        <span class="contact-icon">@</span>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:abhishekmishra212305@gmail.com">
+                                abhishekmishra212305@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">GH</span>
+                        <div>
+                            <h4>GitHub</h4>
+                            <a
+                                href="https://github.com/abhishekmishra212307-sketch"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >Visit my GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">in</span>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a
+                                href="https://www.linkedin.com/in/abhishek-mishra-94684a426"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >Connect on LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">IG</span>
+                        <div>
+                            <h4>Instagram</h4>
+                            <a
+                                href="https://www.instagram.com/a7mishra__"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >Follow on Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-box">
+                    <h3>Send a Message</h3>
+
+                    <form id="contactForm">
+                        <label for="name">Your Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                        <label for="email">Your Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                        <label for="subject">Subject</label>
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Enter subject"
+                            required
+                        >
+
+                        <label for="message">Your Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+
+                        <button type="submit" class="btn btn-primary">
+                            Submit Message
+                        </button>
+
+                        <p id="formStatus" class="form-status" aria-live="polite"></p>
+                    </form>
+                </div>
 
             </div>
+        </section>
 
-
-            <div class="service-card">
-
-                <h3>📱 Responsive Website</h3>
-
-                <p>
-                    Websites designed to work properly on mobile,
-                    tablet and laptop.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <h3>🔧 Basic Website Fixes</h3>
-
-                <p>
-                    Basic HTML, CSS and JavaScript fixes and improvements.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Projects -->
-    <section id="projects">
-
-        <h2>My Projects</h2>
-
-
-        <div class="projects-container">
-
-
-            <!-- Digital Clock -->
-
-            <div class="project-card">
-
-                <h3>Digital Clock</h3>
-
-                <p>
-                    A responsive digital clock with 12/24 hour format,
-                    world clock, stopwatch, date, greeting and alarm features.
-                </p>
-
-                <a href="clock/index.html" target="_blank">
-                    View Project
-                </a>
-
-            </div>
-
-
-            <!-- To-Do List -->
-
-            <div class="project-card">
-
-                <h3>To-Do List</h3>
-
-                <p>
-                    A responsive task management app with add, edit,
-                    complete, delete, search, filter and dark mode features.
-                </p>
-
-                <a href="todo/index.html" target="_blank">
-                    View Project
-                </a>
-
-            </div>
-
-
-            <!-- Calculator -->
-
-            <div class="project-card">
-
-                <h3>Calculator</h3>
-
-                <p>
-                    A simple and responsive calculator built using
-                    HTML, CSS and JavaScript.
-                </p>
-
-                <a href="calculator/index.html" target="_blank">
-                    View Project
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact">
-
-        <h2>Contact Me</h2>
-
-        <p>
-            Have a project or website idea? Feel free to contact me.
-        </p>
-
-
-        <form onsubmit="submitForm(event)">
-
-            <label for="name">Name:</label>
-
-            <input
-                type="text"
-                id="name"
-                placeholder="Enter your name"
-                required>
-
-
-            <br><br>
-
-
-            <label for="email">Email:</label>
-
-            <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required>
-
-
-            <br><br>
-
-
-            <label for="message">Message:</label>
-
-            <br>
-
-            <textarea
-                id="message"
-                placeholder="Write your message"
-                required></textarea>
-
-
-            <br><br>
-
-
-            <button type="submit">
-                Send Message
-            </button>
-
-        </form>
-
-
-       <section id="contact">
-
-    <h2>Contact Me</h2>
-
-    <p>
-        Have a project or website idea? Feel free to contact me.
-    </p>
-
-    <!-- form yahan -->
-
-    <div class="social-links">
-
-        <h3>Connect With Me</h3>
-
-        <a href="https://github.com/abhishekmishra212307-sketch" target="_blank">
-            GitHub
-        </a>
-
-        <a href="https://www.linkedin.com/in/abhishek-mishra-94684a426" target="_blank">
-            LinkedIn
-        </a>
-
-        <a href="https://www.instagram.com/a7mishra__?stkn=cWphNnB4azQ5NHA0" target="_blank">
-            Instagram
-        </a>
-
-    </div>
-
-</section>
-
+    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
+        <a href="#home" class="footer-logo">Abhishek<span>.</span></a>
 
         <p>
-            © 2026 Abhishek Mishra. All Rights Reserved.
+            Learning today, building tomorrow.
         </p>
 
+        <p class="copyright">
+            &copy; <span id="currentYear"></span> Abhishek Mishra.
+            All rights reserved.
+        </p>
     </footer>
 
-
-    <!-- Contact Form Script -->
     <script>
+        // Automatically update the year in the footer
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
 
-        function submitForm(event) {
-
+        // Demo form: this does not send an email
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault();
 
-            alert("Thank you! Your message has been submitted.");
+            document.getElementById("formStatus").textContent =
+                "Your form is working, but message delivery needs a form service or backend.";
 
-        }
-
+            this.reset();
+        });
     </script>
 
-
-    <script src="script.js"></script>
-
 </body>
-
 </html>

@@ -1,24 +1,51 @@
-
 function showMesage() {
     alert("Thank you for visiting my website!");
 }
-// ===== Dark Mode Toggle =====
-const themeBtn = document.getElementById("themeBtn");
+/* ===== Scroll Reveal Animation ===== */
 
-// Load saved theme
-if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-    themeBtn.textContent = "☀️ Light Mode";
-}
+const revealElements = document.querySelectorAll(
+    "#about, #skills, #goals, #services, #projects, #contact"
+)
 
-themeBtn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
-
-    if (document.body.classList.contains("dark-mode")) {
-        themeBtn.textContent = "☀️ Light Mode";
-        localStorage.setItem("theme", "dark");
-    } else {
-        themeBtn.textContent = "🌙 Dark Mode";
-        localStorage.setItem("theme", "light");
-    }
+revealElements.forEach(function (element) {
+    element.classList.add("reveal");
 });
+
+const revealObserver = new IntersectionObserver(
+    function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+revealElements.forEach(function (element) {
+    revealObserver.observe(element);
+});
+
+/* ===== Animate Skills Progress Bars ===== */
+
+const skillsSection = document.getElementById("skills");
+
+if (skillsSection) {
+    const skillsObserver = new IntersectionObserver(
+        function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    skillsSection.classList.add("bars-visible");
+                    observer.unobserve(skillsSection);
+                }
+            });
+        },
+        {
+            threshold: 0.25
+        }
+    );
+    skillsObserver.observe(skillsSection);
+}
