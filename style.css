@@ -1019,3 +1019,73 @@ img {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+/* Scroll reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Premium card hover effect */
+.project-card,
+.service-card,
+.about-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project-card:hover,
+.service-card:hover,
+.about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(75, 100, 255, 0.16);
+}
+
+/* Button hover effect */
+button,
+.btn,
+.button {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+button:hover,
+.btn:hover,
+.button:hover {
+    transform: translateY(-2px);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal,
+    .project-card,
+    .service-card,
+    .about-card,
+    button,
+    .btn,
+    .button {
+        transition: none !important;
+        transform: none;
+    }
+}
